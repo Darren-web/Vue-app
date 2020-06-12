@@ -26,6 +26,10 @@
                     {
                         id:'0002',
                         imgUrl:"https://imgs.qunarzz.com/vc/e3/a1/71/f498dfd3bed948d623c9093252.jpg_92.jpg"
+                    },
+                    {
+                        id:'0003',
+                        imgUrl:"https://imgs.qunarzz.com/vc/e3/a1/71/f498dfd3bed948d623c9093252.jpg_92.jpg"
                     }
                 ]
             }
@@ -40,7 +44,7 @@
         overflow hidden
         width 100%
         height 0
-        padding-bottom 31.25%
+        padding-bottom 30.25%
         background #cccccc
         .swiper-img
             width 100%
