@@ -4,7 +4,7 @@
         <ul>
             <li 
                 class="item border-bottom" 
-                v-for="item of recommendList" 
+                v-for="item of list" 
                 :key="item.id"
             >
                 <div class="item-img-wrapper">
@@ -23,24 +23,8 @@
 <script>
     export default {
         name:"HomeWeekend",
-        data() {
-            return{
-                recommendList: [
-                {
-                    id:'0001',
-                    imgUrl:"https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-                {
-                    id:'0002',
-                    imgUrl:"https://tr-osdcp.qunarzz.com/tr-osd-tr-manager/img/52a5a0f4a4cef3b92ea9dc73288dcc0e.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-                
-            ]
-            }
+        props: {
+            list:Array
         }
     }
 </script>
@@ -48,14 +32,13 @@
 <style scoped lang="stylus">
     @import "~styles/mixins.styl";
     .title
-        margin-top .3rem
         line-height .8rem
         background #eeeeee
         text-indent .2rem
     .item-img-wrapper
         overflow hidden
         height 0
-        padding-bottom 33.9%
+        padding-bottom 37.09%
         .item-img
             width 100%
     .item-info

@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img :src="item.imgUrl" alt="" class="item-img"/>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -17,35 +17,8 @@
 <script>
     export default {
         name:"HomeRecommend",
-        data() {
-            return{
-                recommendList: [
-                {
-                    id:'0001',
-                    imgUrl:"https://img1.qunarzz.com/sight/p0/1805/35/35d8ce88ca9b2488a3.water.jpg_256x160_1218274a.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-                {
-                    id:'0002',
-                    imgUrl:"https://img1.qunarzz.com/sight/p0/1805/35/35d8ce88ca9b2488a3.water.jpg_256x160_1218274a.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-                {
-                    id:'0003',
-                    imgUrl:"https://img1.qunarzz.com/sight/p0/1805/35/35d8ce88ca9b2488a3.water.jpg_256x160_1218274a.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-                {
-                    id:'0004',
-                    imgUrl:"https://img1.qunarzz.com/sight/p0/1805/35/35d8ce88ca9b2488a3.water.jpg_256x160_1218274a.jpg",
-                    title:"秦皇岛老龙头",
-                    desc:"秦皇岛老龙头景点"
-                },
-            ]
-            }
+        props: {
+            list:Array
         }
     }
 </script>

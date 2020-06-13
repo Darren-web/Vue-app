@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index">
                 <div class="icon"
                     v-for="item in page"
@@ -19,61 +19,20 @@
 <script>
     export default {
         name:'HomeIcons',
+        props:{
+            list:Array
+        },
         data() {
             return{
-                iconsList: [
-                    {
-                    id:"0001",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"景点门票1"
-                    },
-                    {
-                    id:"0002",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"滑雪季2"
-                    },
-                    {
-                    id:"0003",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"泡温泉3"
-                    },
-                    {
-                    id:"0004",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"动物园4"
-                    },
-                    {
-                    id:"0005",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"景点门票5"
-                    },
-                    {
-                    id:"0006",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"滑雪季6"
-                    },
-                    {
-                    id:"0007",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"泡温泉7"
-                    },
-                    {
-                    id:"0008",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"动物园8"
-                    },
-                    {
-                    id:"0009",
-                    imgUrl:"https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
-                    desc:"植物园9"
-                    },
-                ]
+                swiperOption:{
+                    autoplay:false
+                }
             }
         },
         computed:{
             pages() {
                 const pages = []
-                this.iconsList.forEach((item,index)=>{
+                this.list.forEach((item,index)=>{
                     const page = Math.floor(index/8)
                     if(!pages[page]){
                         pages[page]= []
