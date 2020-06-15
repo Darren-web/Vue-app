@@ -3,7 +3,9 @@
     <div>
       <router-link to="/"></router-link>
     </div>
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
