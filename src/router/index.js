@@ -14,6 +14,11 @@ Vue.use(VueRouter)
     path: '/city',
     name: 'City',
     component: () => import( '@/views/City')
+  },
+  {
+    path: '/detail/:id',
+    name: 'Detail',
+    component: () => import( '@/views/Detail')
   }
 ]
 
