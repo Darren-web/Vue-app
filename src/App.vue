@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div>
-      <router-link to="/"></router-link>
-    </div>
-    <keep-alive>
+    <keep-alive exclude="Detail">
       <router-view/>
     </keep-alive>
   </div>
